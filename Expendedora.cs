@@ -5,27 +5,43 @@ namespace Expendedoras2023_II
 {
     internal class Expendedora
     {
-        string marca;
-        float precio;
+        internal string marca;
+        internal float precio;
         short cantProductos;
         byte temperatura;
-        string codigo;
+        internal string codigo;
+
+        public byte Temperatura {
+            get => temperatura;
+            set
+            {
+                if( value < 0 || value > 20   )
+                {
+                    temperatura = 14;
+                }
+                else
+                {
+                    temperatura = value;
+                }
+
+
+            }
+        }
 
         public Expendedora()
         {
-            marca = "AMS";
-            temperatura = 14;
-            precio = 20; 
-            Saludar();
-            LimpiarPantalla();
-            Console.WriteLine("Marca: {0} ", marca);
-            Console.WriteLine("Temperatura interna {0} [°C] ", temperatura);
-            LimpiarPantalla();
-            codigo= MostrarCodigoDeProducto();
-            LimpiarPantalla();
-            MostrarPrecio(codigo);
+          
+        }
+
+        public Expendedora(byte temperatura)
+        {
+            this.Temperatura= temperatura;
+            Console.WriteLine("Temperatura: {0}", this.Temperatura);
+
 
         }
+
+
 
         internal void LimpiarPantalla()
         {

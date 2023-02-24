@@ -6,7 +6,14 @@ namespace Expendedoras2023_II
     {
         static void Main()
         {
-            Expendedora miExpendedora= new Expendedora();
+            //  Expendedora miExpendedora= new Expendedora();
+            /* Console.WriteLine("Entrando a modo mantenimienoto");
+             Console.WriteLine("ingrese la temperatura");
+             byte temperatura = byte.Parse( Console.ReadLine());
+            Expendedora miExpendedora = new Expendedora(temperatura);
+            */
+            Cafe miCafe = new Cafe();
+
             Console.ReadLine();
         }
     }
